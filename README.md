@@ -1,3 +1,3 @@
 # portfolio-site
 
-A website display my works.
+A website displaying my works.
