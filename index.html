@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Forum&family=Mountains+of+Christmas:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <header id="header">
@@ -21,11 +22,61 @@
         </ul>
       </div>
     </header>
-    <div class="container">
-      <section id="welcome-section" class="hero">
-        <h1>The Art of Ryan Kenny</h1>
-      </section>
-    </div>
+    <section id="welcome-section" class="hero">
+      <h1>The Works of Ryan Kenny</h1>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="https://ryankennyart.files.wordpress.com/2012/02/img_0228.jpg" />
+        </div>
+        <div class="mySlides fade">
+          <img
+            src="https://ryankennyart.files.wordpress.com/2020/11/river.jpg"
+          />
+        </div>
+        <div class="mySlides fade">
+          <img src="https://ryankennyart.files.wordpress.com/2012/02/img_0226-e1534359260506.jpg" />
+        </div>
+        <div class="mySlides fade">
+          <img src="https://ryankennyart.files.wordpress.com/2012/02/img_0220.jpg"">
+        </div>
+        <div class="mySlides fade">
+          <img src="https://ryankennyart.files.wordpress.com/2022/02/rotated.png?w=2000&h=">
+        </div>
+        <div class="mySlides fade">
+          <img src="https://ryankennyart.files.wordpress.com/2012/02/img_0086.jpg?w=2000&h=">
+        </div>
+        <div class="mySlides fade">
+          <img src="https://ryankennyart.files.wordpress.com/2020/11/bear.jpg" title="Image form https://picsum.photos">
+        </div>
+        <div class="mySlides fade">
+          <img src="https://ryankennyart.files.wordpress.com/2020/11/envir04.jpg?w=2000&h=">
+        </div>
+        <div class="mySlides fade">
+          <img src="https://ryankennyart.files.wordpress.com/2012/09/satoshi_poster_03-copy.jpg?w=337&h=450" title="Image form https://picsum.photos"></a>
+        </div>
+        <div class="mySlides fade">
+          <img src="https://ryankennyart.files.wordpress.com/2020/11/jj.jpg" title="Image form https://picsum.photos">
+        </div>
+      </div>
+      <!-- The dots/circles -->
+      <div class= "dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+        <span class="dot" onclick="currentSlide(8)"></span>
+        <span class="dot" onclick="currentSlide(9)"></span>
+        <span class="dot" onclick="currentSlide(10)"></span>
+      </div>
+            <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </section>
+    
+
     <div class="container">
       <section id="projects">
         <div class="gallery-grid" >
@@ -33,13 +84,27 @@
             <img class="project-tile" src="https://ryankennyart.files.wordpress.com/2012/02/img_0226-e1534359260506.jpg" title="Image form https://picsum.photos">
             <img class="project-tile" src="https://ryankennyart.files.wordpress.com/2012/02/img_0220.jpg" title="Image form https://picsum.photos">
             <img class="project-tile" src="https://ryankennyart.files.wordpress.com/2012/04/img_0172-e1534359308778.jpg" title="Image form https://picsum.photos">
+            
             <img class="project-tile" src="https://ryankennyart.files.wordpress.com/2012/04/img_0170-e1534359434871.jpg" title="Image form https://picsum.photos">
             <img class="project-tile" src="https://ryankennyart.files.wordpress.com/2012/02/img_00701.jpg" title="Image form https://picsum.photos">          
             <img class="project-tile" src="https://ryankennyart.files.wordpress.com/2012/02/img_0230-e1534359405473.jpg" title="Image form https://picsum.photos">
-            <a href="https://ryankennyart.wordpress.com/satoshi/"><img class="project-tile" src="https://ryankennyart.files.wordpress.com/2012/09/satoshi_poster_03-copy.jpg?w=337&h=450" title="Image form https://picsum.photos"></a>
+            
+            <img class="project-tile" src="https://ryankennyart.files.wordpress.com/2012/02/img_0092-e1534359329828.jpg?w=2000&h=">
+            <img class="project-tile" src="https://ryankennyart.files.wordpress.com/2020/11/envir04.jpg?w=2000&h=">
+            <img class="project-tile" src="https://ryankennyart.files.wordpress.com/2021/02/toes2.jpg?w=2000&h=">
+            
+            <img class="project-tile" src="https://ryankennyart.files.wordpress.com/2012/09/satoshi_poster_03-copy.jpg?w=337&h=450" title="Image form https://picsum.photos"></a>
             <img class="project-tile" src="https://ryankennyart.files.wordpress.com/2012/02/img_0228.jpg" title="Image form https://picsum.photos">
             <img class="project-tile" src="https://ryankennyart.files.wordpress.com/2012/02/distance.jpg" title="Image form https://picsum.photos">
+
+            <img class="project-tile" src="https://ryankennyart.files.wordpress.com/2012/02/img_0086.jpg?w=2000&h=">
+            <img class="project-tile" src="https://ryankennyart.files.wordpress.com/2020/11/creature01.jpg?w=2000&h=">
+            <img class="project-tile" src="https://ryankennyart.files.wordpress.com/2022/02/rotated.png?w=2000&h=">
+            
             <img class="project-tile" src="https://ryankennyart.files.wordpress.com/2020/11/river.jpg" title="Image form https://picsum.photos">
+            <img class="project-tile" src="https://ryankennyart.files.wordpress.com/2020/11/wolf.jpg?w=2000&h=">
+            <img class="project-tile" src="https://ryankennyart.files.wordpress.com/2020/11/wick_final_02.jpg?w=2000&h=">
+            
             <img class="project-tile" src="https://ryankennyart.files.wordpress.com/2020/11/jj.jpg" title="Image form https://picsum.photos">
             <img class="project-tile" src="https://ryankennyart.files.wordpress.com/2020/11/bear.jpg" title="Image form https://picsum.photos">
           </figure>
@@ -64,7 +129,7 @@
           <li><a id="profile-link" class="nav-link condense" href="https://github.com/RKenny23" target="_blank">GitHub</a></li>
           <li><a id="profile-link" class="nav-link condense" href="mailto:rkenny238@hotmail.com">Email</a></li>
         </ul>
-        <p>Copyright 2021,  Ryan Kenny</p>
+        <p>Copyright 2022,  Ryan Kenny</p>
       </div>
     </footer>
   </body>

@@ -1,7 +1,8 @@
 :root {
-  --color-bg: #1955d1;
-  --color-text: #fff;
-  --color-link: #d2d0db;
+  --clr-bg: #1955d1;
+  --clr-secondary: #darkblue;
+  --clr-text: #fff;
+  --clr-link: #d2d0db;
 }
 
 * {
@@ -11,7 +12,7 @@
 }
 
 body {
-  color: var(--color-text);
+  color: var(--clr-text);
   font-family: "Forum", sans-serif;
   font-size: 1.5rem;
   line-height: 1.5;
@@ -32,20 +33,22 @@ h2 {
 }
 
 a {
-  color: var(--color-link);
+  color: var(--clr-link);
   text-decoration: none;
   transition: color 0.3s;
 }
 
 a:hover {
-  color: var(--color-text);
+  color: var(--clr-text);
 }
 
 .container {
   max-width: 1000px;
   width: 100%;
-  margin: 0 auto;
+  margin: 2rem auto;
+  height: 100%;
 }
+
 
 header {
   position: fixed;
@@ -95,14 +98,146 @@ header {
 
 .hero {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  /* margin-top: 2rem; */
+  /* height: 100vh; */
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 4rem; */
   width: 100%;
+  float: bottom;
   /* padding: 2rem; */
   text-align: center;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 4rem;
+}
+
+
+/* Slideshow */
+.slideshow-container {
+  position: relative;
+  overflow: hidden;
+  margin: 2rem 0;
+  align-items: center;
+}
+
+.slideshow-container img {
+  width: 50%;
+  /* height: 20%; */
+  min-width: 500px;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 10px;
+  color: var(--clr-secondary);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 10%;
+  user-select: none;
+}
+
+.prev {
+  left: 30%;
+}
+
+.next {
+  right: 30%;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 1500px) {
+  .prev {
+    left: 20%;
+  }
+  
+  .next {
+    right: 20%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .prev {
+    left: 10%;
+  }
+  
+  .next {
+    right: 10%;
+  }
+
+}
+
+
+/* The dots/bullets/indicators */
+.dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 40px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .grid {
@@ -139,13 +274,30 @@ header {
     text-align: center;
     padding: 2rem;
   }
+
+  .slideshow-container img {
+    width: 10%;
+  }
+
+  .prev, .next {
+    top: 91.2%;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
 }
 
-/* @media (max-width: 660px) {
-  .hero {
-    margin-top: 10rem;
+@media (max-width: 660px) {
+  .hero h1{
+    top: 20%;
+    margin-bottom: 1rem;
   }
-} */
+
+  .slideshow-container img {
+    margin-top: 8rem;
+  }
+}
 
 .footer {
   background: black;
@@ -160,7 +312,7 @@ header {
   display: flex;
   list-style: none;
   justify-content: flex-end;
-  color: var(--color-link);
+  color: var(--clr-link);
   background-color: black;
   width: 100%;
   margin: 0 auto;
@@ -171,7 +323,7 @@ header {
   text-align: right;
   font-size: 0.75rem;
   padding: 0 1rem 0.75rem 0;
-  color: #d2d0db;
+  color: var(--clr-link);
 }
 .grid--1x2 {
   display: flex;
@@ -198,6 +350,7 @@ header {
   grid-gap: 1.5rem;
   justify-items: center;
   margin-bottom: 4rem;
+ 
   /* padding: 4rem; */
 }
 
@@ -209,6 +362,7 @@ header {
   background-color: black;
   /* color: #d9d9d9; */
   border-radius: 10px;
+
 }
 
 /* The Images */
@@ -217,6 +371,9 @@ header {
   height: auto;
   object-fit: cover;
   transition: opacity 0.25s ease-in-out;
+  /* object-fit: cover; */
+  /* height: 100%;
+  width: 100%; */
 }
 
 .project-tile:hover {
