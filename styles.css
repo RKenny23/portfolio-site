@@ -13,7 +13,7 @@
 
 body {
   color: var(--clr-text);
-  font-family: "Forum", sans-serif;
+  font-family: 'Forum', sans-serif;
   font-size: 1.5rem;
   line-height: 1.5;
   background: #1956d1;
@@ -25,11 +25,18 @@ body {
 h1 {
   font-weight: 500;
   font-size: 4rem;
+  letter-spacing: 3px;
+  word-spacing: 4px;
+  text-align: center;
+  margin-top: 5rem;
 }
 
 h2 {
   font-weight: 400;
-  margin-bottom: 1rem;
+  /* margin: 1rem; */
+  margin-top: 3rem;
+  text-align: left;
+  letter-spacing: 2px;
 }
 
 a {
@@ -49,7 +56,6 @@ a:hover {
   height: 100%;
 }
 
-
 header {
   position: fixed;
   width: 100%;
@@ -61,22 +67,71 @@ header {
   z-index: 1;
 }
 
-/* @media (max-width: 660px) {
-  header {
-    flex-wrap: wrap;
-  }
-} */
+/* Navbar */
 
-.nav-bar > ul {
+.navbar {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  /* box-shadow: none !important; */
+}
+
+.navbar > ul {
   display: flex;
   flex-direction: row;
   list-style: none;
   float: right;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .nav-link {
   padding: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.nav-links li a {
+  display: block;
+  color: #fff;
+  padding: 0 2rem;
+}
+
+.nav-links a:last-child {
+  padding-right: 0;
+}
+
+.nav-links a:hover {
+  color: var(--secondary-color);
+  transition: 0.3s;
+}
+
+.nav-links .current a {
+  color: var(--secondary-color);
+}
+
+.nav-toggler {
+  position: absolute;
+  top: 1.8rem;
+  right: 0;
+  /* display: none; */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.nav-toggler .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
 }
 
 @media (max-width: 660px) {
@@ -96,27 +151,40 @@ header {
   }
 }
 
+/* Hero section */
+
 .hero {
-  display: flex;
+  /* display: flex; */
   /* flex-direction: column; */
-  align-items: center;
-  justify-content: center;
-  /* height: 100vh; */
-  height: 1000px;
-  display: flex;
-  flex-direction: column;
+  /* align-items: center;
+  justify-content: center; */
+  /* height: fit-content; */
+  /* display: flex;
+  flex-direction: column; */
   /* margin-top: 4rem; */
-  width: 100%;
-  float: bottom;
+  /* width: 100%; */
+  /* float: bottom; */
   /* padding: 2rem; */
-  text-align: center;
+  /* text-align: center; */
+  /* position: relative; */
+  /* background-image: url('./images/tiger01.jpg');
+  background-repeat: no-repeat;
+  background-position: center; */
+  margin: 5rem auto;
+  margin-bottom: 0;
+  height: 200px;
+  display: flex;
+  justify-content: center;
 }
 
 .hero h1 {
-  position: absolute;
-  top: 4rem;
+  /* position: absolute; */
+  /* top: 4rem; */
 }
 
+.interests {
+  position: absolute;
+}
 
 /* Slideshow */
 .slideshow-container {
@@ -124,11 +192,14 @@ header {
   overflow: hidden;
   margin: 2rem 0;
   align-items: center;
+  height: 600px;
+  display: flex;
+  justify-content: center;
 }
 
 .slideshow-container img {
   width: 50%;
-  /* height: 20%; */
+  height: 100%;
   min-width: 500px;
   display: flex;
   justify-content: center;
@@ -144,21 +215,23 @@ header {
   cursor: pointer;
   position: absolute;
   top: 50%;
-  padding: 10px;
-  color: var(--clr-secondary);
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: var(clr-secondary);
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 10%;
+  border-radius: 0 3px 3px 0;
   user-select: none;
 }
 
 .prev {
-  left: 30%;
+  left: 10%;
 }
 
 .next {
-  right: 30%;
+  right: 10%;
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -167,11 +240,11 @@ header {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-@media (max-width: 1500px) {
+/* @media (max-width: 1500px) {
   .prev {
     left: 20%;
   }
-  
+
   .next {
     right: 20%;
   }
@@ -181,13 +254,11 @@ header {
   .prev {
     left: 10%;
   }
-  
+
   .next {
     right: 10%;
   }
-
-}
-
+} */
 
 /* The dots/bullets/indicators */
 .dots {
@@ -195,7 +266,7 @@ header {
   left: 0;
   right: 0;
   margin: 0 auto;
-  bottom: 40px;
+  /* bottom: 40px; */
 }
 
 .dot {
@@ -250,6 +321,10 @@ header {
   padding: 2rem;
 }
 
+.tiger {
+  padding-left: 0;
+}
+
 .about-desc {
   flex-direction: column;
   justify-content: left;
@@ -258,18 +333,21 @@ header {
   width: 100%;
 }
 
+.about-desc h2 {
+  margin-bottom: 1.5rem;
+  /* font-weight: 600; */
+  margin-top: 0;
+  letter-spacing: 1px;
+}
+
 @media (max-width: 768px) {
   .grid--1x2 {
     max-width: 500px;
-    /* width: 100%; */
-    /* margin: 0 auto; */
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
   }
-  /* .icon {
-    padding: 2rem;
-  } */
+
   .about-desc {
     text-align: center;
     padding: 2rem;
@@ -279,7 +357,8 @@ header {
     width: 10%;
   }
 
-  .prev, .next {
+  .prev,
+  .next {
     top: 91.2%;
   }
 
@@ -289,14 +368,14 @@ header {
 }
 
 @media (max-width: 660px) {
-  .hero h1{
+  /* .hero h1{
     top: 20%;
     margin-bottom: 1rem;
-  }
+  } */
 
-  .slideshow-container img {
+  /* .slideshow-container img {
     margin-top: 8rem;
-  }
+  } */
 }
 
 .footer {
@@ -347,35 +426,43 @@ header {
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  gap: 3rem;
-  justify-items: center;
+  /* gap: 4rem; */
+  /* justify-items: center; */
   margin-bottom: 4rem;
-  align-items: center;
+  /* align-items: center; */
 }
 
 /* The Picture Frame */
 .gallery-frame {
   padding: 2rem;
-  /* font-size: 1.2rem; */
   text-align: center;
-  background-color: black;
-  /* color: #d9d9d9; */
-  border-radius: 10px;
   align-items: center;
+}
 
+.gallery-frame h2 {
+  margin: 1rem;
+  margin-top: 3rem;
+}
+
+.project-tile.characters:first-child {
+  border-radius: 10%;
+}
+
+.project-tile.characters {
+  border-radius: 50%;
 }
 
 /* The Images */
 .project-tile {
+  border-radius: 3px;
   max-width: 300px;
   height: auto;
   object-fit: cover;
   transition: opacity 0.25s ease-in-out;
-  /* object-fit: cover; */
-  /* height: 100%;
-  width: 100%; */
 }
 
 .project-tile:hover {
-  opacity: 0.7;
+  /* opacity: 0.7; */
+  transform: scale(1.5);
+  transition: all 0.3s;
 }
