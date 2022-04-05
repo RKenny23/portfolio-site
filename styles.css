@@ -64,7 +64,6 @@ body {
 
 h2 {
   font-weight: 400;
-
   text-align: center;
   letter-spacing: 2px;
 }
@@ -82,7 +81,6 @@ a:hover {
 header {
   position: fixed;
   width: 100%;
-  top: 0;
   display: flex;
   justify-content: center;
   z-index: 10;
@@ -112,11 +110,11 @@ header {
 
 }
 
-
 .nav-link {
   display: block;
   color: var(--clr-link);
   padding: 0 3vw;
+  white-space: nowrap;
 
 }
 
@@ -130,16 +128,35 @@ header {
       overflow-x: hidden;
   }
 }
+
 @media (max-width: 620px) {
   .nav-links ul {
     font-size: 1.2rem;
   }
 
   .nav-link {
-    padding: 0.4rem;
+    padding: 0 1rem;
   }
 
 }
+
+@media (max-width: 490px) {
+
+  .nav-links ul {
+    font-size: 0.9rem;
+  }
+
+  .nav-link {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 340px) {
+  .nav-link {
+    padding: 0 1vw;
+  }
+}
+
 /* Gallery section */
 
 .frame {
@@ -148,8 +165,6 @@ header {
   background-color: #000;
   border-radius: 10px;
   padding: 2rem;
-  /* display: flex; */
-  /* justify-content: center; */
 }
 
 .gallery-grid {
@@ -364,25 +379,33 @@ header {
 .grid--1x2 {
   display: flex;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  align-items: center;
   justify-items: center;
 }
 
 .about-img {
   display: flex;
   width: 50%;
-  min-width: 400px;
+  min-width: 500px;
   padding: 2rem;
   border-radius: 3px;
+  margin: 0 auto;
 }
 
 .about-desc {
-  flex-direction: column;
+  display: flex;
   justify-content: left;
   padding: 2rem;
   margin: 0 auto;
   width: 100%;
   min-width: 300px;
+  align-items: center;
+}
+
+@media (max-width: 500px) {
+  .about-desc {
+    margin: 0 ;
+    padding: 0;
+  }
 }
 
 .about-desc h2 {
@@ -394,11 +417,11 @@ header {
 
 @media (max-width: 1180px) {
   .grid--1x2 {
-    /* max-width: 500px; */
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
+    justify-items: center;
   }
 
   .about-desc,
@@ -444,9 +467,12 @@ header {
 }
 
 @media (max-width: 560px) {
+
+  .footer {
+    border-radius:0;
+  }
+
   .footer > ul {
-    /* width: 100%; */
-    /* padding: 0.5rem; */
     font-size: 1.2rem;
     justify-content: center;
   }
@@ -456,34 +482,19 @@ header {
     padding: 0.75rem 0;
   }
 
-  .nav-links {
-    /* width: 100%; */
-    margin: 0 auto;
-
-  }
-
-  .gradient {
-    width: 100%;
-  }
-
-  header {
-    overflow: hidden;
-  }
-
   .slideshow-container {
     width: 100%;
+    border-radius: 0;
   }
 
   .frame {
     width: 100%;
+    border-radius: 0;
   }
 
   .about-img {
     padding: 0;
     height: 50%;
-  }
-  .grid--1x2 {
-    grid-template-columns: repeat(2, 1fr));
   }
 
   .frame {
