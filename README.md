@@ -1,3 +1,3 @@
-# portfolio-site
+# RyanKennyArt.com
 
 A website displaying my works.
