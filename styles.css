@@ -434,6 +434,10 @@ header {
   .prev, .next {
     top: 94%;
   }
+
+  /* .gallery__column {
+    width: 50%;
+  } */
 }
 
 .footer {
