@@ -201,6 +201,30 @@ header {
   transition: all 0.3s;
 }
 
+.img-expanded {
+  position: fixed;
+  overflow: hidden;
+  top: 60px;
+  left: 29%;
+  z-index: 1000;
+  max-width: 800px;
+}
+
+@media (max-width: 1180px) {
+  .img-expanded {
+    top: 60px;
+    left: 20%;
+    max-width: 500px;
+  
+  }
+}
+
+@media (max-width: 800px) {
+  .img-expanded {
+    left: 10%;
+    max-width: 400px;
+  }
+}
 
 
 .characters {
@@ -240,6 +264,7 @@ header {
 }
 .gallery__image:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 .gallery__caption {
   position: absolute;
