@@ -204,10 +204,10 @@ header {
 .img-expanded {
   position: fixed;
   overflow: hidden;
-  top: 0;
-  left: 34%;
+  top: 60px;
+  left: 35%;
   z-index: 1000;
-  max-width: 600px;
+  max-width: 30%;
   max-height: 100vh;
   width: auto;
 }
