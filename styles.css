@@ -205,9 +205,9 @@ header {
   position: fixed;
   overflow: hidden;
   top: 0;
-  left: 33%;
+  left: 34%;
   z-index: 1000;
-  max-width: 650px;
+  max-width: 600px;
   max-height: 100vh;
   width: auto;
 }
