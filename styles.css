@@ -203,31 +203,77 @@ header {
 
 .img-expanded {
   position: fixed;
-  overflow: hidden;
+  /* overflow: hidden; */
   top: 60px;
-  left: 35%;
+  left: 33%;
   z-index: 1000;
-  max-width: 30%;
+  /* max-width: 30%; */
+  max-width: 650px;
   max-height: 100vh;
-  width: auto;
+}
+
+.gallery__link.river.img-expanded {
+  width: 800px;
+}
+
+@media (max-width: 1700px) {
+  .img-expanded {
+    left: 32%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .img-expanded {
+    left: 28%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .img-expanded {
+    top: 70px;
+    left: 26.5%;
+    max-width: 600px;
+  }
 }
 
 @media (max-width: 1180px) {
   .img-expanded {
-    top: 60px;
-    left: 28%;
+    left: 26%;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .img-expanded {
+    left: 22%;
     max-width: 500px;
   }
 }
 
 @media (max-width: 800px) {
   .img-expanded {
-    left: 20%;
-    max-width: 400px;
+    left: 17%;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 800px) {
+  .img-expanded {
+    left: 12%;
+    max-width: 500px;
   }
 }
 
 @media (max-width: 500px) {
+  .img-expanded {
+    left: 5%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 400px) {
   .img-expanded {
     left: 0;
     max-width: 400px;
@@ -244,9 +290,9 @@ header {
   padding: 2px;
   transition: 0.3s;
 }
-/* .gallery.img-expanded:hover .gallery__image {
+.grayscale {
   filter: grayscale(1);
-} */
+}
 .gallery__column {
   display: flex;
   flex-direction: column;
@@ -255,12 +301,19 @@ header {
 .gallery__link {
   margin: 2px;
   overflow: hidden;
+  cursor: pointer;
 }
 /* .gallery__link:hover .gallery__image {
   filter: grayscale(0);
 } */
 .gallery__link:hover .gallery__caption {
   opacity: 1;
+
+}
+
+.img-expanded:hover .shrink-text {
+  opacity: 1;
+
 }
 .gallery__thumb {
   position: relative;
@@ -272,8 +325,8 @@ header {
 }
 .gallery__image:hover {
   transform: scale(1.1);
-  cursor: pointer;
 }
+
 .gallery__caption {
   position: absolute;
   bottom: 0;
@@ -287,6 +340,21 @@ header {
   color: white;
   opacity: 0;
   background: linear-gradient(0deg, rgba(0, 0, 0, .5) 0%, rgba(255, 255, 255, 0) 100%);
+  transition: 0.3s;
+}
+
+.shrink-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px 15px 15px;
+  /* width: 100%; */
+  /* font-family: 'Raleway', sans-serif; */
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: white;
+  opacity: 0;
   transition: 0.3s;
 }
 

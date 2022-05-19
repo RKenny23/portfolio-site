@@ -39,11 +39,25 @@ function showSlides(n) {
 //   navbarLinks.classList.toggle('active');
 // });
 
-const images = document.querySelectorAll('.gallery__image');
+const images = document.querySelectorAll('.gallery__link');
+const others = document.querySelectorAll('.gallery__image:not(.img-expanded)');
+
+// images.forEach((image) => {
+//   image.addEventListener('click', () => {
+//     image.classList.toggle('img-expanded');
+//     others.forEach((other) => {
+//       if (!other.classList.contains('img-expanded')) {
+//         other.classList.toggle('grayscale');
+//       }
+//       if (!image.classList.contains('img-expanded')) {
+//         image.classList.remove('grayscale');
+//       }
+//     });
+//   });
+// });
 
 images.forEach((image) => {
   image.addEventListener('click', () => {
-    console.log('clicked');
     image.classList.toggle('img-expanded');
   });
 });
