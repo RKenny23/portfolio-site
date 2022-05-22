@@ -22,7 +22,7 @@ body {
   background: linear-gradient(to top, #1956d1, #0b214d);
 }
 
-.title {
+.title, .webdev-title {
   font-weight: 500;
   font-size: 4rem;
   letter-spacing: 3px;
@@ -582,6 +582,10 @@ header {
 }
 
 @media (max-width: 560px) {
+
+  .webdev-title {
+    font-size: 2.5rem;
+  }
 
   .footer {
     border-radius:0;
