@@ -281,9 +281,13 @@ header {
 }
 
 
-.characters {
+/* .characters {
   border-radius: 50%;
 }
+
+.gallery-grid:first-child {
+  border-radius: 0;
+} */
 
 .gallery {
   display: flex;
@@ -406,7 +410,7 @@ header {
   color: var(clr-secondary);
   font-weight: bold;
   font-size: 18px;
-  transition: 0.6s ease;
+  transition: 0.3s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
@@ -422,7 +426,7 @@ header {
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  color: var(--clr-bg);
 }
 
 /* The dots/bullets/indicators */
@@ -491,20 +495,27 @@ header {
   display: flex;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   justify-items: center;
+  align-content: center;
 }
 
 .about-img {
   display: flex;
   width: 50%;
   min-width: 500px;
-  padding: 2rem;
+  /* padding: 0.5rem; */
   border-radius: 3px;
   margin: 0 auto;
+  /* align-items: center; */
+  align-content: center;
+}
+
+.about-pict {
+  padding: 2rem;
 }
 
 .about-desc {
   display: flex;
-  justify-content: left;
+  /* justify-content: left; */
   padding: 2rem;
   margin: 0 auto;
   width: 100%;
@@ -516,6 +527,10 @@ header {
   .about-desc {
     margin: 0 ;
     padding: 0;
+  }
+
+  .about-img {
+    min-width: 300px;
   }
 }
 
